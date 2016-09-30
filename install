@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# vim
+ln -s ${BASEDIR}/vimrc ~/.vimrc
+
+# git
+ln -s ${BASEDIR}/gitignore_global ~/.gitignore_global
+
+# tmux
+ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+
+# editorconfig
+ln -s ${BASEDIR}/editorconfig ~/.editorconfig
