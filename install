@@ -14,5 +14,6 @@ ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 # editorconfig
 ln -s ${BASEDIR}/editorconfig ~/.editorconfig
 
-# zsh custom
+# zsh
 ln -s ${BASEDIR}/theme.zsh-theme ~/.oh-my-zsh/custom/theme.zsh-theme
+ln -s ${BASEDIR}/zshrc ~/.zshrc
