@@ -1,5 +1,5 @@
+runtime macros/matchit.vim
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -13,7 +13,6 @@ syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-set number
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -29,6 +28,10 @@ Plugin 'christoomey/vim-tmux-runner'
 Plugin 'valloric/MatchTagAlways'
 
 Plugin 'airblade/vim-gitgutter'
+
+Bundle 'kana/vim-textobj-user'
+
+Plugin 'textobj-rubyblock'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,3 +61,8 @@ inoremap <∆> <Esc>:m .+1<CR>==gi
 inoremap <˚> <Esc>:m .-2<CR>==gi
 vnoremap <∆> :m '>+1<CR>gv=gv
 vnoremap <˚> :m '<-2<CR>gv=gv
+
+" for ruby-block-plugin
+if has("autocmd")
+  filetype indent plugin on
+endif
