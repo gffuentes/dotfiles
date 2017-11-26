@@ -3,6 +3,7 @@ set nocompatible              " be iMproved, required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -32,6 +33,13 @@ Plugin 'airblade/vim-gitgutter'
 Bundle 'kana/vim-textobj-user'
 
 Plugin 'textobj-rubyblock'
+
+Plugin 'rails.vim'
+
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'ctrlp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -66,3 +74,5 @@ vnoremap <˚> :m '<-2<CR>gv=gv
 if has("autocmd")
   filetype indent plugin on
 endif
+
+set complete=.,w,b,u,t,i,kspell

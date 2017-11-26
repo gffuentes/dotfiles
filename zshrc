@@ -40,9 +40,6 @@ ZSH_THEME="robbyrussell"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -91,10 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="/Users/gabrielfuentes/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
 ################################################################
 ################### FIX TAB COMPLETION ISSUES ##################
 # This will perform chmod g-w for each file returned by compaudit
@@ -107,3 +100,16 @@ export NVM_DIR="/Users/gabrielfuentes/.nvm"
 #rm ~/.zcompdump*
 # Regenerate completions file
 #compinitm
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Update Ctags aliax to point to homebrew ctags for vim.rails
+alias ctags="/usr/local/bin/ctags"
+
+# PATH ADDITIONS
+export NVM_DIR="/Users/gabrielfuentes/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+eval "rbenv rehash"

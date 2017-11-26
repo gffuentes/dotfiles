@@ -4,7 +4,7 @@
 *.log
 *.sql
 *.sqlite
- 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -18,3 +18,7 @@ Thumbs.db
 # TMUX #
 ########
 *.swp
+
+# CTAGS #
+#########
+tags
